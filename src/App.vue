@@ -9,15 +9,20 @@ import PageSection from '@/components/PageSection.vue';
     <nav class="mx-4 flex justify-between py-4">
       <h1 class="text-2xl font-bold">Possible</h1>
       <ul class="flex gap-4">
-        <li class="flex items-center justify-center p-2 hover:bg-gray-200"><a href="#">主页</a></li>
-        <li class="flex items-center justify-center p-2 hover:bg-gray-200"><a href="#">关于</a></li>
-        <li class="flex items-center justify-center p-2 hover:bg-gray-200"><a href="#">下载</a></li>
-        <li class="flex items-center justify-center p-2 hover:bg-gray-200"><a href="#">联系</a></li>
+        <li class="flex items-center justify-center p-2 hover:bg-gray-200">
+          <a href="#about">关于</a>
+        </li>
+        <li class="flex items-center justify-center p-2 hover:bg-gray-200">
+          <a href="#download">下载</a>
+        </li>
+        <li class="flex items-center justify-center p-2 hover:bg-gray-200">
+          <a href="#contact">联系</a>
+        </li>
       </ul>
     </nav>
   </header>
   <main class="flex flex-col">
-    <page-section v-for="_ in 3" :key="_" style="min-height: 600px; max-height: 800px">
+    <page-section v-for="_ in 3" :key="_" class="h-screen" id="about">
       <div>
         {{ faker.lorem.paragraphs(5) }}
       </div>
@@ -30,7 +35,7 @@ import PageSection from '@/components/PageSection.vue';
         </template>
       </el-image>
     </page-section>
-    <page-section style="height: 800px">
+    <page-section style="height: 800px" id="download">
       <div class="flex flex-col gap-4">
         <div class="flex flex-row items-center justify-center gap-4">
           <h1>{{ faker.location.country() }}</h1>
@@ -47,7 +52,7 @@ import PageSection from '@/components/PageSection.vue';
         </div>
       </div>
     </page-section>
-    <page-section class="h-screen">
+    <page-section class="h-screen" id="contact">
       <h1>联系我们</h1>
     </page-section>
   </main>
