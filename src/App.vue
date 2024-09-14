@@ -41,7 +41,7 @@ import Detail from '@/assets/detail.png';
         <div class="mb-8 ml-0 text-gray-500">
           这是一个使用 Vue + Vite + Electron 开发的可视化的方式目标管理软件
         </div>
-        <ul class="font-light text-gray-500" style="font-size: 15px; list-style-type: disc">
+        <ul class="font-light text-gray-500 mx-4" style="font-size: 15px; list-style-type: disc">
           <li>使用带有时间轴的画布来显示任务，可以清晰地显示任务之间的关联关系。</li>
           <li>任务可以发布在公共空间,任何人都可以通过关注来查看和参与任务。(待实现)</li>
           <li>软件会每天筛选出当天需要执行的任务，显示在每日任务中。</li>
@@ -61,11 +61,11 @@ import Detail from '@/assets/detail.png';
         </div>
         <div>
           <ul class="flex flex-row gap-2">
-            <li v-for="_ in 3" :key="_">
-              <el-text>
-                {{ faker.person.fullName() }}
-              </el-text>
-            </li>
+<!--            <li v-for="_ in 3" :key="_">-->
+<!--              <el-text>-->
+<!--                {{ faker.person.fullName() }}-->
+<!--              </el-text>-->
+<!--            </li>-->
           </ul>
         </div>
       </div>
